@@ -67,7 +67,7 @@ namespace StarsV2
 
             if (e.Key == Key.Escape)
             {
-                GameMenu gameMenu = new GameMenu();
+                Skins gameMenu = new Skins();
                 gameMenu.Show();
                 //gameTimer.Stop();
                 //gimi.Stop();

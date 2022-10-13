@@ -25,9 +25,9 @@ namespace StarsV2
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            GameMenu gameMenu = new GameMenu();
-            ready.Play();
-            gameMenu.Show();
+          //Skins gameMenu = new Skins();
+            //ready.Play();
+            //gameMenu.Show();
             Close();
             
         }
@@ -48,6 +48,14 @@ namespace StarsV2
             game2.Show();
             Close();
             
+        }
+
+        private void Button_War(object sender, RoutedEventArgs e)
+        {
+            Skins skins = new Skins();
+            ready.Play();
+            skins.Show();
+            Close();
         }
     }
 }

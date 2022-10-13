@@ -20,7 +20,7 @@
             <Image Source="Sprites/korabl.png" Width="250" />
         </StackPanel>
         <StackPanel Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
-            
+
             <Image Source="Sprites/korabl1.png" Width="250"/>
         </StackPanel>
         <StackPanel Grid.Column="0" VerticalAlignment="Center" Grid.Row="1">
@@ -30,7 +30,13 @@
             <Button Content="Бонусный уровень" Height="50" Width="120" Click="Button_Click_2"/>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button Content="Назад" Height="30" Width="100" Click="Button_Click"/>
+            <Button Content="Выход" Height="30" Width="100" Click="Button_Click"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" VerticalAlignment="Top" Grid.Row="2" Margin="0,3,0,0">
+            <Button Content="В бой!" Height="50" Width="120" Click="Button_War"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" VerticalAlignment="Top" Grid.Row="2" Margin="0,3,0,0">
+            <Button Content="Выбрать скин!" Height="50" Width="120" />
         </StackPanel>
     </Grid>
 </Window>
