@@ -16,14 +16,19 @@ namespace StarsV2
 {
     internal class GameUI : IGameUI
     {
+
+        public event EventHandler<KeyEventArgs> OnKeyDownPressed;
+        public event EventHandler<KeyEventArgs> OnKeyUpPressed;
         Skins skin;
+
+       
+
         public void Init()
         {         
             skin = new Skins();
             skin.Show();
         }
-
-
+       
         private void AddRectangle(object sender, MouseButtonEventArgs e)
         {
             Rectangle newBullet = new Rectangle
@@ -36,9 +41,9 @@ namespace StarsV2
                 Stroke = Brushes.Red
 
             };
-            Canvas.SetLeft(newBullet, Canvas.GetLeft(player) + player.Width / 2);
-            Canvas.SetTop(newBullet, Canvas.GetTop(player) - newBullet.Height);
-            Canva.Children.Add(newBullet);
+            //Canvas.SetLeft(newBullet, Canvas.GetLeft(player) + player.Width / 2);
+            //Canvas.SetTop(newBullet, Canvas.GetTop(player) - newBullet.Height);
+            //Canva.Children.Add(newBullet);
         }
     }
 }

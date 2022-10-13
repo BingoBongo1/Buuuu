@@ -33,7 +33,7 @@ namespace StarsV2
 
         Random rand = new Random();
         
-        //bool moveLeft, moveRight;
+        bool moveLeft, moveRight;
         int enemySpriteCounter = 0;
         int enemyCounter = 100;
         int playerSpeed = 10;
@@ -78,14 +78,14 @@ namespace StarsV2
                 enemyCounter = limit;
             }
 
-            //if (moveLeft == true && Canvas.GetLeft(player) > 0)
-            //{
-            //    Canvas.SetLeft(player, Canvas.GetLeft(player) - playerSpeed);
-            //}
-            //if (moveRight == true && Canvas.GetLeft(player) + 90 < Application.Current.MainWindow.Width)
-            //{
-            //    Canvas.SetLeft(player, Canvas.GetLeft(player) + playerSpeed);
-            //}
+            if (moveLeft == true && Canvas.GetLeft(player) > 0)
+            {
+                Canvas.SetLeft(player, Canvas.GetLeft(player) - playerSpeed);
+            }
+            if (moveRight == true && Canvas.GetLeft(player) + 90 < Application.Current.MainWindow.Width)
+            {
+                Canvas.SetLeft(player, Canvas.GetLeft(player) + playerSpeed);
+            }
 
 
             foreach (var x in Canva.Children.OfType<Rectangle>())
@@ -160,60 +160,60 @@ namespace StarsV2
 
         }
 
-        //private void OnKeyDown(object sender, KeyEventArgs e)
-        //{
-        //    if (e.Key == Key.Left)
-        //    {
-        //        moveLeft = true;
-        //    }
-        //    if (e.Key == Key.Right)
-        //    {
-        //        moveRight = true;
-        //    }
-        //}
+        private void OnKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Left)
+            {
+                moveLeft = true;
+            }
+            if (e.Key == Key.Right)
+            {
+                moveRight = true;
+            }
+        }
 
-        //private void OnKeyUp(object sender, KeyEventArgs e)
-        //{
-        //    if (e.Key == Key.Left)
-        //    {
-        //        moveLeft = false;
-        //    }
-        //    if (e.Key == Key.Right)
-        //    {
-        //        moveRight = false;
-        //    }
+        private void OnKeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Left)
+            {
+                moveLeft = false;
+            }
+            if (e.Key == Key.Right)
+            {
+                moveRight = false;
+            }
 
-        //    if (e.Key == Key.Space)
-        //    {
-        //        Rectangle newBullet = new Rectangle
-        //        {
+            if (e.Key == Key.Space)
+            {
+                Rectangle newBullet = new Rectangle
+                {
 
-        //            Tag = "bullet",
-        //            Height = 20,
-        //            Width = 5,
-        //            Fill = Brushes.White,
-        //            Stroke = Brushes.Red
+                    Tag = "bullet",
+                    Height = 20,
+                    Width = 5,
+                    Fill = Brushes.White,
+                    Stroke = Brushes.Red
 
-        //        };
+                };
 
-        //        Canvas.SetLeft(newBullet, Canvas.GetLeft(player) + player.Width / 2);
-        //        Canvas.SetTop(newBullet, Canvas.GetTop(player) - newBullet.Height);
+                Canvas.SetLeft(newBullet, Canvas.GetLeft(player) + player.Width / 2);
+                Canvas.SetTop(newBullet, Canvas.GetTop(player) - newBullet.Height);
 
-        //        Canva.Children.Add(newBullet);
+                Canva.Children.Add(newBullet);
 
-        //    }
+            }
 
-        //    if (e.Key == Key.Escape)
-        //    {
-        //        GameMenu gameMenu = new GameMenu();
-        //        gameMenu.Show();
-        //        gameTimer.Stop();
-        //        gimi.Stop();
-        //        Close();
-        //    }
-        //}
+            if (e.Key == Key.Escape)
+            {
+                Skins skin = new Skins();
+                skin.Show();
+                gameTimer.Stop();
+                gimi.Stop();
+                Close();
+    }
+}
 
-        private void MakeEnemies()
+private void MakeEnemies()
         {
             ImageBrush enemySprite = new ImageBrush();
 

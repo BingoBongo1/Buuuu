@@ -6,8 +6,11 @@ namespace StarsV2
     internal interface IGameControl
     {
 
-        void OnKeyUp(object sender, KeyEventArgs e);
-        void OnKeyDown(object sender, KeyEventArgs e);
+        //void KeyUp(object sender, KeyEventArgs e);
+        //void KeyDown(object sender, KeyEventArgs e);
+        void KeyUp( KeyEventArgs e);
+        void KeyDown(KeyEventArgs e);
+
         event EventHandler<Direction> OnDirectionChanged;
 
         

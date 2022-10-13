@@ -22,7 +22,7 @@ namespace StarsV2
 
         bool moveLeft, moveRight;
 
-        public void OnKeyDown(object sender, KeyEventArgs e)
+        public void KeyDown(KeyEventArgs e)
         {
             if (e.Key == Key.Left)
             {
@@ -34,7 +34,7 @@ namespace StarsV2
             }
         }
 
-        public void OnKeyUp(object sender, KeyEventArgs e)
+        public void KeyUp(KeyEventArgs e)
         {
             if (e.Key == Key.Left)
             {
@@ -73,6 +73,7 @@ namespace StarsV2
                 //gimi.Stop();
                 //Close();
             }
+
         }
 
 
